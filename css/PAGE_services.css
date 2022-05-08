@@ -6,12 +6,6 @@
       grid-template-rows: 120px 1fr 125.5px;
 }
 
-svg.logo-svg {
-  width: 100%;
-  height: 100%;
-  padding-left: 40px;
-}
-
 .bg_color {
   display: -ms-grid;
   display: grid;
@@ -393,6 +387,9 @@ li {
 }
 
 @media screen and (max-width: 1000px) {
+  width: 100%;
+  height: 100%;
+  padding-left: 40px;
   .logo_menu_footer {
     margin-top: 43px;
     margin-right: 50px;
