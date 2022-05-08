@@ -1,0 +1,1048 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+$text_color: #ffffff
+
+//--------------contaier----------------//
+
+.container
+    display: grid
+    grid-template-rows: 120px 1fr 125.5px
+
+
+//----------header----------//
+.bg_color
+    display: grid
+    margin: 0
+    width: 100%
+    height: 100vh  
+    background: #006f32
+    //background: linear-gradient(171.41deg, #09815d 20%, #045E43 60.81%, #005c42 100%) no-repeat
+
+
+.header     
+    z-index: 1
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    background: rgba(0, 0, 0, 0.6)
+    display: grid
+    grid-template-columns: 1fr 4fr
+    display: flex
+    justify-content: space-between
+
+.logo_menu  
+    margin-top: 40px
+    margin-left: 50px
+
+li 
+    list-style: none
+    display: inline-block
+    padding: 45px
+
+.menu_item
+    text-decoration: none
+    color: $text_color
+    font-size: 25px
+    font-family: Roboto , sans-serif
+
+.menu_item:hover
+    font-family: Roboto, sans-serif
+    text-decoration: none
+    color: $text_color
+    padding-bottom: 5px
+    border-bottom: 2px solid $text_color 
+    transition-duration: 0.5s
+
+.ul_menu 
+    margin: 0
+    padding: 0
+
+.menu
+    display: inline-block
+    display: grid
+
+#menu_toggle
+    display: none
+
+//--------------------------------------------------------//
+
+@media screen and ( max-width: 1410px  )
+    .header
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        background: rgba(0, 0, 0, 0.6)
+        display: grid
+        grid-template-columns: 1fr
+
+    .ul_menu 
+        margin: 0
+        padding: 0
+        display: flex
+        justify-content: center
+    
+    .logo_menu  
+        display: flex
+        justify-content: center
+        margin: 20px 0 0 0 
+
+    .header
+        position: fixed
+
+@media screen and ( max-width: 1000px  )
+    #menu_toggle
+        opacity: 0
+  
+    #menu_toggle:checked ~ .menu_btn > span 
+        transform: rotate(45deg)
+  
+    #menu_toggle:checked ~ .menu_btn > span::before 
+        top: 0
+        transform: rotate(0)
+  
+    #menu_toggle:checked ~ .menu_btn > span::after 
+        top: 0
+        transform: rotate(90deg)
+  
+    #menu_toggle:checked ~ .ul_menu 
+        visibility: visible
+        left: 0
+  
+    .menu_btn 
+        display: flex
+        align-items: center
+        position: fixed
+        top: 20px
+        left: 20px
+        width: 26px
+        height: 26px
+        cursor: pointer
+        z-index: 1
+  
+    .menu_btn > span,
+    .menu_btn > span::before,
+    .menu_btn > span::after 
+        display: block
+        position: absolute
+        width: 100%
+        height: 2px
+        background-color: $text_color
+        transition-duration: 0.4s
+
+    .menu_btn > span::before 
+        content: ''
+        top: -8px
+    
+    .menu_btn > span::after 
+        content: ''
+        top: 8px
+  
+  
+    .ul_menu 
+        display: block
+        position: fixed
+        visibility: hidden
+        top: 0
+        width: 250px
+        height: 100%
+        margin: 0
+        padding: 80px 0
+        list-style: none
+        background-color: rgba(0, 0, 0, 0.3)
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2)
+        transition-duration: 0.25s
+    
+    .menu_item 
+        padding: 12px
+        font-family: Roboto, sans-serif
+        font-size: 25px
+        text-decoration: none
+        transition-duration: 0.25s
+
+    .logo_menu 
+        display: flex
+        justify-content: right
+        margin: 20px
+    
+    .header
+        position: fixed
+
+    li 
+        list-style: none
+        display: inline-block
+        padding: 40px 45px 0 
+
+@media screen and ( max-width: 1410px  )
+    .header
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        background: rgba(0, 0, 0, 0.6)
+        display: grid
+        grid-template-columns: 1fr
+
+    .ul_menu 
+        margin: 0
+        padding: 0
+        display: flex
+        justify-content: center
+    
+    .logo_menu  
+        display: flex
+        justify-content: center
+        margin: 20px 0 0 0 
+
+        .header
+            position: fixed
+
+@media screen and ( max-width: 1000px  )
+    #menu_toggle
+        opacity: 0
+  
+    #menu_toggle:checked ~ .menu_btn > span 
+        transform: rotate(45deg)
+  
+    #menu_toggle:checked ~ .menu_btn > span::before 
+        top: 0
+        transform: rotate(0)
+  
+    #menu_toggle:checked ~ .menu_btn > span::after 
+        top: 0
+        transform: rotate(90deg)
+  
+    #menu_toggle:checked ~ .ul_menu 
+        visibility: visible
+        left: 0
+  
+    .menu_btn 
+        display: flex
+        align-items: center
+        position: fixed
+        top: 20px
+        left: 20px
+        width: 26px
+        height: 26px
+        cursor: pointer
+        z-index: 1
+  
+    .menu_btn > span,
+    .menu_btn > span::before,
+    .menu_btn > span::after 
+        display: block
+        position: absolute
+        width: 100%
+        height: 2px
+        background-color: $text_color
+        transition-duration: 0.4s
+        
+    .menu_btn > span::before 
+        content: ''
+        top: -8px
+    
+    .menu_btn > span::after 
+        content: ''
+        top: 8px
+  
+    .ul_menu 
+        display: block
+        position: fixed
+        visibility: hidden
+        top: 0
+        width: 200px
+        height: 100%
+        margin: 0
+        padding-top: 30px
+        list-style: none
+        background-color: rgba(0, 0, 0, 0.7)
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.8)
+        transition-duration: 0.25s
+    
+    .menu_item 
+        padding: 0px
+        font-family: Roboto, sans-serif
+        font-size: 20px
+        text-decoration: none
+        transition-duration: 0.25s
+
+    .logo_menu 
+        display: flex
+        justify-content: right
+        margin: 20px
+    
+    .header
+        position: fixed
+
+//-----------footer-----------------//
+
+.footer
+    position: absolute
+    top: 1674.5px
+    left: 0
+    width: 100%
+    background: rgba(0, 0, 0, 0.6)
+    display: grid
+    grid-template-columns: 1fr 4fr
+    display: flex
+    justify-content: space-between
+
+.logo_menu_footer
+    margin-top: 43px
+    margin-right: 50px
+    display: grid
+
+.li_feetback
+    padding: 20px
+    margin-left: 10px
+    margin-right: 10px
+
+//----------------------------------------//
+
+@media screen and ( max-width: 1000px  )
+    
+    .logo_menu_footer
+        margin-top: 43px
+        margin-right: 50px
+        display: none
+
+    .li_feetback
+        padding: 10px
+
+    .footer
+        position: absolute
+        top: 2594.5px
+        left: 0
+        width: 100%
+        background: rgba(0, 0, 0, 0.6)
+        display: grid
+        grid-template-columns: 1fr
+        display: flex
+        justify-content: center
+        margin-left: 0 
+
+    .ul_feetback
+        padding: 0
+
+    .facebook_icon
+        margin-left: 0px
+
+@media screen and ( max-width: 470px  )
+
+    .logo_menu_footer
+        margin-top: 43px
+        margin-right: 50px
+        display: none
+
+    .li_feetback
+        padding: 10px 3px 10px 3px
+
+    .footer
+        position: absolute
+        top: 2594.5px
+        left: 0
+        width: 100%
+        background: rgba(0, 0, 0, 0.6)
+        display: grid
+        grid-template-columns: 1fr
+        display: flex
+        justify-content: center
+        margin-left: 0 
+
+    .ul_feetback
+        padding: 0
+
+    .facebook_icon
+        margin-left: 0px
+
+@media screen and ( max-width: 400px  )
+
+    .logo_menu_footer
+        margin-top: 43px
+        margin-right: 50px
+        display: none
+
+    .li_feetback
+        padding: 10px 0 10px 0
+
+    .footer
+        position: absolute
+        top: 2594.5px
+        left: 0
+        width: 100%
+        background: rgba(0, 0, 0, 0.6)
+        display: grid
+        grid-template-columns: 1fr
+        display: flex
+        justify-content: center
+        margin-left: 0 
+
+    .ul_feetback
+        padding: 0
+
+    .facebook_icon
+        margin-left: 0px
+
+//-------------main----------------//
+
+main 
+  margin-top: 200px
+  height: auto
+  display: -ms-grid
+  display: grid
+  -ms-grid-rows: auto 1fr
+  grid-template-rows: auto 1fr
+
+
+.container_one 
+    display: -ms-grid
+    display: grid
+    -ms-grid-columns: 1fr 1fr 1fr 1fr
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-gap: 20px
+    padding: 10px 40px 10px 40px
+
+
+.container_one .element_one 
+    display: -ms-grid
+    display: grid
+    -ms-grid-rows: 110px 50px 300px
+    grid-template-rows: 110px 50px 300px
+    padding: 6px 0
+
+
+.container_one .element_one .img_element_one 
+    width: 100px
+    height: 100px
+    display: -ms-grid
+    display: grid
+    -ms-grid-column-align: center
+    justify-self: center
+    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5))
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5))
+
+
+.container_one .element_one .text_element_one 
+    text-align: center
+    font-size: 23px
+    font-family: Roboto, sans-serif
+    color: #ffffff
+    text-shadow: 2px 2px 2px #000
+
+
+.container_one .element_one .title_element_one 
+    text-align: center
+    font-family: Roboto, sans-serif
+    color: #ffffff
+    text-shadow: 2px 2px 2px #000
+
+
+.container_one .element_two 
+    display: -ms-grid
+    display: grid
+    -ms-grid-rows: 110px 100px 200px
+    grid-template-rows: 110px 100px 200px
+    padding: 6px 0
+
+
+.container_one .element_two .img_element_two 
+    width: 100px
+    height: 100px
+    display: -ms-grid
+    display: grid
+    -ms-grid-column-align: center
+    justify-self: center
+    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5))
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5))
+
+
+.container_one .element_two .text_element_two 
+    text-align: center
+    font-size: 23px
+    font-family: Roboto, sans-serif
+    color: #ffffff
+    text-shadow: 2px 2px 2px #000
+
+
+.container_one .element_two .title_element_two 
+    text-align: center
+    font-family: Roboto, sans-serif
+    color: #ffffff
+    text-shadow: 2px 2px 2px #000
+
+
+.container_one .element_three 
+    display: -ms-grid
+    display: grid
+    -ms-grid-rows: 110px 50px 300px
+    grid-template-rows: 110px 50px 300px
+    padding: 6px 0
+
+
+.container_one .element_three .img_element_three 
+    width: 100px
+    height: 100px
+    display: -ms-grid
+    display: grid
+    -ms-grid-column-align: center
+    justify-self: center
+    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5))
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5))
+
+
+.container_one .element_three .text_element_three 
+    text-align: center
+    font-size: 23px
+    font-family: Roboto, sans-serif
+    color: #ffffff
+    text-shadow: 2px 2px 2px #000
+
+
+.container_one .element_three .title_element_three 
+    text-align: center
+    font-family: Roboto, sans-serif
+    color: #ffffff
+    text-shadow: 2px 2px 2px #000
+
+
+.container_one .element_four 
+    display: -ms-grid
+    display: grid
+    -ms-grid-rows: 110px 50px 300px
+    grid-template-rows: 110px 50px 300px
+    padding: 6px 0
+
+
+.container_one .element_four .img_element_four 
+    width: 100px
+    height: 100px
+    display: -ms-grid
+    display: grid
+    -ms-grid-column-align: center
+    justify-self: center
+    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5))
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5))
+
+
+.container_one .element_four .text_element_four 
+    text-align: center
+    font-size: 23px
+    font-family: Roboto, sans-serif
+    color: #ffffff
+    text-shadow: 2px 2px 2px #000
+
+
+.container_one .element_four .title_element_four 
+    text-align: center
+    font-family: Roboto, sans-serif
+    color: #ffffff
+    text-shadow: 2px 2px 2px #000
+
+
+.container_two 
+    height: auto
+
+
+.text_content_two 
+    text-align: center
+    font-size: 40px
+    font-family: Roboto, sans-serif
+    color: #ffffff
+    text-shadow: 2px 2px 2px #000
+    margin: 50px 20px 50px 20px
+
+
+.img_container_three 
+    width: 550px
+    height: 470px
+    margin: 10px 30px 40px 120px
+    -webkit-filter: drop-shadow(0px 7px 7px rgba(0, 0, 0, 0.7))
+            filter: drop-shadow(0px 7px 7px rgba(0, 0, 0, 0.7))
+
+
+.container_two_box 
+    display: -ms-grid
+    display: grid
+    width: auto
+    height: 550px
+    -ms-grid-columns: 1fr 1fr
+    grid-template-columns: 1fr 1fr
+    margin-right: 70px
+
+
+.container_two_list_two 
+    text-align: left
+    font-size: 40px
+    font-family: Roboto, sans-serif
+    color: #ffffff
+    text-shadow: 2px 2px 2px #000
+    margin-top: 0
+
+
+.container_two_list_one 
+    text-align: left
+    font-size: 35px
+    font-family: Roboto, sans-serif
+    color: #ffffff
+    text-shadow: 2px 2px 2px #000
+
+
+@media screen and (max-width: 1520px) 
+    .container_two_list_two 
+        text-align: left
+        font-size: 30px
+        font-family: Roboto, sans-serif
+        color: #ffffff
+        text-shadow: 2px 2px 2px #000
+        margin-top: 0
+  
+    .container_two_list_one 
+        text-align: left
+        font-size: 25px
+        font-family: Roboto, sans-serif
+        color: #ffffff
+        text-shadow: 2px 2px 2px #000
+  
+    .container_two_list_one .container_one 
+        display: -ms-grid
+        display: grid
+        -ms-grid-rows: 1fr 1fr 1fr 1fr
+        grid-template-rows: 1fr 1fr 1fr 1fr
+        grid-gap: 20px
+        padding: 10px 40px 10px 40px
+  
+
+
+@media screen and (max-width: 1200px) 
+    main 
+        margin-top: 200px
+        height: 1800px
+        display: -ms-grid
+        display: grid
+        -ms-grid-rows: 900px 1fr
+        grid-template-rows: 900px 1fr
+    
+    .container_one 
+        display: -ms-grid
+        display: grid
+        -ms-grid-rows: 200px 200px
+        grid-template-rows: 200px 200px
+        grid-gap: 20px
+        padding: 10px 40px 10px 40px
+    
+    .element_one 
+        height: 400px
+        -ms-grid-column: 1
+        grid-column-start: 1
+        grid-column-end: 3
+        -ms-grid-row: 1
+        grid-row-start: 1
+        grid-row-end: 3
+        display: -ms-grid
+        display: grid
+        -ms-grid-rows: 110px 50px 300px
+        grid-template-rows: 110px 50px 300px
+        padding: 6px 0
+    
+    .element_two 
+        height: 400px
+        -ms-grid-column: 3
+        grid-column-start: 3
+        grid-column-end: 5
+        -ms-grid-row: 1
+        grid-row-start: 1
+        grid-row-end: 3
+        display: -ms-grid
+        display: grid
+        -ms-grid-rows: 110px 50px 300px
+        grid-template-rows: 110px 50px 300px
+        padding: 6px 0
+    
+    .element_three 
+        height: 400px
+        -ms-grid-column: 1
+        grid-column-start: 1
+        grid-column-end: 3
+        -ms-grid-row: 3
+        grid-row-start: 3
+        grid-row-end: 5
+        display: -ms-grid
+        display: grid
+        -ms-grid-rows: 110px 50px 300px
+        grid-template-rows: 110px 50px 300px
+        padding: 6px 0
+    
+    .element_four 
+        height: 400px
+        -ms-grid-column: 3
+        grid-column-start: 3
+        grid-column-end: 5
+        -ms-grid-row: 3
+        grid-row-start: 3
+        grid-row-end: 5
+        display: -ms-grid
+        display: grid
+        -ms-grid-rows: 110px 50px 300px
+        grid-template-rows: 110px 50px 300px
+        padding: 6px 0
+    
+    .img_container_three 
+        width: 400px
+        height: 400px
+        margin: 10px 30px 40px 120px
+        -webkit-filter: drop-shadow(0px 7px 7px rgba(0, 0, 0, 0.7))
+                filter: drop-shadow(0px 7px 7px rgba(0, 0, 0, 0.7))
+    
+    .text_content_two 
+        text-align: center
+        font-size: 30px
+        font-family: Roboto, sans-serif
+        color: #ffffff
+        text-shadow: 2px 2px 2px #000
+        margin: 50px 20px 50px 20px
+    
+    .container_two_list_two 
+        text-align: left
+        font-size: 30px
+        font-family: Roboto, sans-serif
+        color: #ffffff
+        text-shadow: 2px 2px 2px #000
+        margin-top: 0
+    
+    .container_two_list_one 
+        text-align: left
+        font-size: 25px
+        font-family: Roboto, sans-serif
+        color: #ffffff
+        text-shadow: 2px 2px 2px #000
+    
+    .footer 
+        position: absolute
+        top: 1900px
+        left: 0
+        width: 100%
+        background: rgba(0, 0, 0, 0.6)
+        display: -ms-grid
+        display: grid
+        -ms-grid-columns: 1fr 4fr
+        grid-template-columns: 1fr 4fr
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-pack: justify
+        -ms-flex-pack: justify
+        justify-content: space-between
+  
+
+
+@media screen and (max-width: 1000px) 
+    main 
+        margin-top: 200px
+        height: 1800px
+        display: -ms-grid
+        display: grid
+        -ms-grid-rows: 1750px 1fr
+        grid-template-rows: 1750px 1fr
+  
+    .container_one 
+        display: -ms-grid
+        display: grid
+        -ms-grid-rows: 200px 200px 200px 200px
+        grid-template-rows: 200px 200px 200px 200px
+        grid-gap: 20px
+        padding: 10px 40px 10px 40px
+  
+    .element_one 
+        height: 400px
+        -ms-grid-column: 2
+        grid-column-start: 2
+        grid-column-end: 4
+        -ms-grid-row: 1
+        grid-row-start: 1
+        grid-row-end: 3
+        display: -ms-grid
+        display: grid
+        -ms-grid-rows: 110px 50px 300px
+        grid-template-rows: 110px 50px 300px
+        padding: 6px 0
+  
+    .element_two 
+        height: 400px
+        -ms-grid-column: 2
+        grid-column-start: 2
+        grid-column-end: 4
+        -ms-grid-row: 3
+        grid-row-start: 3
+        grid-row-end: 5
+        display: -ms-grid
+        display: grid
+        -ms-grid-rows: 110px 50px 300px
+        grid-template-rows: 110px 50px 300px
+        padding: 6px 0
+  
+    .element_three 
+        height: 400px
+        -ms-grid-column: 2
+        grid-column-start: 2
+        grid-column-end: 4
+        -ms-grid-row: 5
+        grid-row-start: 5
+        grid-row-end: 7
+        display: -ms-grid
+        display: grid
+        -ms-grid-rows: 110px 50px 300px
+        grid-template-rows: 110px 50px 300px
+        padding: 6px 0
+    
+    .element_four 
+        height: 400px
+        -ms-grid-column: 2
+        grid-column-start: 2
+        grid-column-end: 4
+        -ms-grid-row: 7
+        grid-row-start: 7
+        grid-row-end: 9
+        display: -ms-grid
+        display: grid
+        -ms-grid-rows: 110px 50px 300px
+        grid-template-rows: 110px 50px 300px
+        padding: 6px 0
+    
+    .img_container_three 
+        width: 400px
+        height: 400px
+        margin: 10px 30px 40px 120px
+        -webkit-filter: drop-shadow(0px 7px 7px rgba(0, 0, 0, 0.7))
+                filter: drop-shadow(0px 7px 7px rgba(0, 0, 0, 0.7))
+  
+    .text_content_two 
+        text-align: center
+        font-size: 30px
+        font-family: Roboto, sans-serif
+        color: #ffffff
+        text-shadow: 2px 2px 2px #000
+        margin: 50px 20px 50px 20px
+    
+    .container_two_list_two 
+        text-align: center
+        font-size: 30px
+        font-family: Roboto, sans-serif
+        color: #ffffff
+        text-shadow: 2px 2px 2px #000
+        margin-top: 0
+    
+    .container_two_list_one 
+        text-align: center
+        font-size: 25px
+        font-family: Roboto, sans-serif
+        color: #ffffff
+        text-shadow: 2px 2px 2px #000
+    
+    .footer 
+        position: absolute
+        top: 3350px
+        left: 0
+        width: 100%
+        background: rgba(0, 0, 0, 0.6)
+        display: -ms-grid
+        display: grid
+        -ms-grid-columns: 1fr 4fr
+        grid-template-columns: 1fr 4fr
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-pack: justify
+        -ms-flex-pack: justify
+        justify-content: space-between
+    
+    .container_two 
+        display: -ms-grid
+        display: grid
+        -ms-grid-rows: 1fr 1fr
+        grid-template-rows: 1fr 1fr
+        height: 1200px
+    
+    .container_two_box 
+        display: -ms-grid
+        display: grid
+        -ms-grid-column-align: center
+        justify-self: center
+        grid-gap: 30px
+        margin: 0
+        width: auto
+        height: 1050px
+    
+    .img_container_three 
+        -ms-grid-column-align: center
+        justify-self: center
+        margin: 0
+        width: 400px
+        height: 400px
+        -webkit-filter: drop-shadow(0px 7px 7px rgba(0, 0, 0, 0.7))
+                filter: drop-shadow(0px 7px 7px rgba(0, 0, 0, 0.7))
+    
+    .container_two_list 
+        -ms-grid-column-align: center
+        justify-self: center
+        height: 500px
+        display: -ms-grid
+        display: grid
+        -ms-grid-column: 1
+        grid-column-start: 1
+        grid-column-end: 4
+        -ms-grid-row: 3
+        grid-row-start: 3
+        grid-row-end: 5
+    
+    .img_container_two 
+        display: -ms-grid
+        display: grid
+        -ms-grid-column: 1
+        grid-column-start: 1
+        grid-column-end: 4
+        -ms-grid-row: 1
+        grid-row-start: 1
+        grid-row-end: 3
+  
+
+
+@media screen and (max-width: 660px) 
+    .img_container_three 
+        -ms-grid-column-align: center
+        justify-self: center
+        margin: 0
+        width: 300px
+        height: 300px
+        -webkit-filter: drop-shadow(0px 7px 7px rgba(0, 0, 0, 0.7))
+                filter: drop-shadow(0px 7px 7px rgba(0, 0, 0, 0.7))
+    
+    .element_one 
+        height: 400px
+        -ms-grid-column: 1
+        grid-column-start: 1
+        grid-column-end: 5
+        -ms-grid-row: 1
+        grid-row-start: 1
+        grid-row-end: 3
+        display: -ms-grid
+        display: grid
+        -ms-grid-rows: 110px 50px 300px
+        grid-template-rows: 110px 50px 300px
+        padding: 6px 0
+    
+    .element_two 
+        height: 400px
+        -ms-grid-column: 1
+        grid-column-start: 1
+        grid-column-end: 5
+        -ms-grid-row: 3
+        grid-row-start: 3
+        grid-row-end: 5
+        display: -ms-grid
+        display: grid
+        -ms-grid-rows: 110px 50px 300px
+        grid-template-rows: 110px 50px 300px
+        padding: 6px 0
+    
+    .element_three 
+        height: 400px
+        -ms-grid-column: 1
+        grid-column-start: 1
+        grid-column-end: 5
+        -ms-grid-row: 5
+        grid-row-start: 5
+        grid-row-end: 7
+        display: -ms-grid
+        display: grid
+        -ms-grid-rows: 110px 50px 300px
+        grid-template-rows: 110px 50px 300px
+        padding: 6px 0
+    
+    .element_four 
+        height: 400px
+        -ms-grid-column: 1
+        grid-column-start: 1
+        grid-column-end: 5
+        -ms-grid-row: 7
+        grid-row-start: 7
+        grid-row-end: 9
+        display: -ms-grid
+        display: grid
+        -ms-grid-rows: 110px 50px 300px
+        grid-template-rows: 110px 50px 300px
+        padding: 6px 0
+    
+    .text_content_two 
+        text-align: center
+        font-size: 25px
+        font-family: Roboto, sans-serif
+        color: #ffffff
+        text-shadow: 2px 2px 2px #000
+        margin: 50px 20px 50px 20px
+  
+
+
+@media screen and (max-width: 510px) 
+    .footer 
+        position: absolute
+        top: 3400px
+        left: 0
+        width: 100%
+        background: rgba(0, 0, 0, 0.6)
+        display: -ms-grid
+        display: grid
+        -ms-grid-columns: 1fr 4fr
+        grid-template-columns: 1fr 4fr
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-pack: justify
+        -ms-flex-pack: justify
+        justify-content: space-between
+  
+
+
+@media screen and (max-width: 422px) 
+    .footer 
+        position: absolute
+        top: 3450px
+        left: 0
+        width: 100%
+        background: rgba(0, 0, 0, 0.6)
+        display: -ms-grid
+        display: grid
+        -ms-grid-columns: 1fr 4fr
+        grid-template-columns: 1fr 4fr
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-pack: justify
+        -ms-flex-pack: justify
+        justify-content: space-between
+  
+
+
+@media screen and (max-width: 400px) 
+    svg.logo-svg 
+        width: 100%
+        height: 100%
+        padding-left: 40px
+    
+    .footer 
+        position: absolute
+        top: 3500px
+        left: 0
+        width: 100%
+        background: rgba(0, 0, 0, 0.6)
+        display: -ms-grid
+        display: grid
+        -ms-grid-columns: 1fr 4fr
+        grid-template-columns: 1fr 4fr
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-pack: justify
+        -ms-flex-pack: justify
+        justify-content: space-between
+  

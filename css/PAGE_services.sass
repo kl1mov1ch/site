@@ -1,0 +1,797 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+$text_color: #ffffff
+
+//--------------contaier----------------//
+
+.container
+    display: grid
+    grid-template-rows: 120px 1fr 125.5px
+
+
+//----------header----------//
+svg.logo-svg 
+    width: 100%
+    height: 100%
+    padding-left: 40px
+
+.bg_color
+    display: grid
+    margin: 0
+    width: 100%
+    height: 100vh  
+    background: #006f32
+    //background: linear-gradient(171.41deg, #09815d 20%, #045E43 60.81%, #005c42 100%) no-repeat
+
+.header     
+    z-index: 1
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    background: rgba(0, 0, 0, 0.6)
+    display: grid
+    grid-template-columns: 1fr 4fr
+    display: flex
+    justify-content: space-between
+
+.logo_menu  
+    margin-top: 40px
+    margin-left: 50px
+
+li 
+    list-style: none
+    display: inline-block
+    padding: 45px
+
+.menu_item
+    text-decoration: none
+    color: $text_color
+    font-size: 25px
+    font-family: Roboto , sans-serif
+
+.menu_item:hover
+    font-family: Roboto, sans-serif
+    text-decoration: none
+    color: $text_color
+    padding-bottom: 5px
+    border-bottom: 2px solid $text_color 
+    transition-duration: 0.5s
+
+.ul_menu 
+    margin: 0
+    padding: 0
+
+.menu
+    display: inline-block
+    display: grid
+
+#menu_toggle
+    display: none
+
+//--------------------------------------------------------//
+
+@media screen and ( max-width: 1410px  )
+    
+    svg.logo-svg 
+        width: auto
+        height: auto
+
+    .header
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        background: rgba(0, 0, 0, 0.6)
+        display: grid
+        grid-template-columns: 1fr
+
+    .ul_menu 
+        margin: 0
+        padding: 0
+        display: flex
+        justify-content: center
+    
+    .logo_menu  
+        display: flex
+        justify-content: center
+        margin: 20px 0 0 0 
+
+    .header
+        position: fixed
+
+@media screen and ( max-width: 1000px  )
+    #menu_toggle
+        opacity: 0
+  
+    #menu_toggle:checked ~ .menu_btn > span 
+        transform: rotate(45deg)
+  
+    #menu_toggle:checked ~ .menu_btn > span::before 
+        top: 0
+        transform: rotate(0)
+  
+    #menu_toggle:checked ~ .menu_btn > span::after 
+        top: 0
+        transform: rotate(90deg)
+  
+    #menu_toggle:checked ~ .ul_menu 
+        visibility: visible
+        left: 0
+  
+    .menu_btn 
+        display: flex
+        align-items: center
+        position: fixed
+        top: 20px
+        left: 20px
+        width: 26px
+        height: 26px
+        cursor: pointer
+        z-index: 1
+  
+    .menu_btn > span,
+    .menu_btn > span::before,
+    .menu_btn > span::after 
+        display: block
+        position: absolute
+        width: 100%
+        height: 2px
+        background-color: $text_color
+        transition-duration: 0.4s
+
+    .menu_btn > span::before 
+        content: ''
+        top: -8px
+    
+    .menu_btn > span::after 
+        content: ''
+        top: 8px
+  
+  
+    .ul_menu 
+        display: block
+        position: fixed
+        visibility: hidden
+        top: 0
+        width: 250px
+        height: 100%
+        margin: 0
+        padding: 80px 0
+        list-style: none
+        background-color: rgba(0, 0, 0, 0.3)
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2)
+        transition-duration: 0.25s
+    
+    .menu_item 
+        padding: 12px
+        font-family: Roboto, sans-serif
+        font-size: 25px
+        text-decoration: none
+        transition-duration: 0.25s
+
+    .logo_menu 
+        display: flex
+        justify-content: right
+        margin: 20px
+    
+    .header
+        position: fixed
+
+    li 
+        list-style: none
+        display: inline-block
+        padding: 40px 45px 0 
+
+    svg.logo-svg 
+        width: auto
+        height: auto
+
+@media screen and ( max-width: 1410px  )
+    svg.logo-svg 
+        padding-top: 0
+        width: auto
+        height: auto
+    .header
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        background: rgba(0, 0, 0, 0.6)
+        display: grid
+        grid-template-columns: 1fr
+
+    .ul_menu 
+        margin: 0
+        padding: 0
+        display: flex
+        justify-content: center
+    
+    .logo_menu  
+        display: flex
+        justify-content: center
+        margin: 20px 0 0 0 
+
+        .header
+            position: fixed
+
+@media screen and ( max-width: 1000px  )
+    #menu_toggle
+        opacity: 0
+  
+    #menu_toggle:checked ~ .menu_btn > span 
+        transform: rotate(45deg)
+  
+    #menu_toggle:checked ~ .menu_btn > span::before 
+        top: 0
+        transform: rotate(0)
+  
+    #menu_toggle:checked ~ .menu_btn > span::after 
+        top: 0
+        transform: rotate(90deg)
+  
+    #menu_toggle:checked ~ .ul_menu 
+        visibility: visible
+        left: 0
+  
+    .menu_btn 
+        display: flex
+        align-items: center
+        position: fixed
+        top: 20px
+        left: 20px
+        width: 26px
+        height: 26px
+        cursor: pointer
+        z-index: 1
+  
+    .menu_btn > span,
+    .menu_btn > span::before,
+    .menu_btn > span::after 
+        display: block
+        position: absolute
+        width: 100%
+        height: 2px
+        background-color: $text_color
+        transition-duration: 0.4s
+        
+    .menu_btn > span::before 
+        content: ''
+        top: -8px
+    
+    .menu_btn > span::after 
+        content: ''
+        top: 8px
+  
+    .ul_menu 
+        display: block
+        position: fixed
+        visibility: hidden
+        top: 0
+        width: 200px
+        height: 100%
+        margin: 0
+        padding-top: 30px
+        list-style: none
+        background-color: rgba(0, 0, 0, 0.7)
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.8)
+        transition-duration: 0.25s
+    
+    .menu_item 
+        padding: 0px
+        font-family: Roboto, sans-serif
+        font-size: 20px
+        text-decoration: none
+        transition-duration: 0.25s
+
+    .logo_menu 
+        display: flex
+        justify-content: right
+        margin: 20px
+    
+    .header
+        position: fixed
+
+//-----------footer-----------------//
+
+.footer
+    position: absolute
+    top: 1674.5px
+    left: 0
+    width: 100%
+    background: rgba(0, 0, 0, 0.6)
+    display: grid
+    grid-template-columns: 1fr 4fr
+    display: flex
+    justify-content: space-between
+
+.logo_menu_footer
+    margin-top: 43px
+    margin-right: 50px
+    display: grid
+
+.li_feetback
+    padding: 20px
+    margin-left: 10px
+    margin-right: 10px
+
+//----------------------------------------//
+
+@media screen and ( max-width: 1000px  )
+    
+    .logo_menu_footer
+        margin-top: 43px
+        margin-right: 50px
+        display: none
+
+    .li_feetback
+        padding: 10px
+
+    .footer
+        position: absolute
+        top: 2594.5px
+        left: 0
+        width: 100%
+        background: rgba(0, 0, 0, 0.6)
+        display: grid
+        grid-template-columns: 1fr
+        display: flex
+        justify-content: center
+        margin-left: 0 
+
+    .ul_feetback
+        padding: 0
+
+    .facebook_icon
+        margin-left: 0px
+
+@media screen and ( max-width: 470px  )
+
+    
+    .logo_menu_footer
+        margin-top: 43px
+        margin-right: 50px
+        display: none
+
+    .li_feetback
+        padding: 10px 3px 10px 3px
+
+    .footer
+        position: absolute
+        top: 2594.5px
+        left: 0
+        width: 100%
+        background: rgba(0, 0, 0, 0.6)
+        display: grid
+        grid-template-columns: 1fr
+        display: flex
+        justify-content: center
+        margin-left: 0 
+
+    .ul_feetback
+        padding: 0
+
+    .facebook_icon
+        margin-left: 0px
+
+@media screen and ( max-width: 400px  )
+
+    .logo_menu_footer
+        margin-top: 43px
+        margin-right: 50px
+        display: none
+
+    .li_feetback
+        padding: 10px 0 10px 0
+
+    .footer
+        position: absolute
+        top: 2594.5px
+        left: 0
+        width: 100%
+        background: rgba(0, 0, 0, 0.6)
+        display: grid
+        grid-template-columns: 1fr
+        display: flex
+        justify-content: center
+        margin-left: 0 
+
+    .ul_feetback
+        padding: 0
+
+    .facebook_icon
+        margin-left: 0px
+
+//-------------main----------------//
+
+main
+    margin-top: 200px 
+    display: grid
+    grid-template-rows: 1fr 1fr 1fr
+    grid-row-gap: 30px
+
+.content_one
+    height: 400px
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-column-gap: 30px
+    margin: 30px
+
+.content_one_element_one
+    background-color: rgba(0, 0, 0, 0.4   )
+    border-radius: 20px                         
+ 
+
+.content_one_element_one_title
+    font-size: 45px
+    width: 100%
+    height: 50
+    font-family: Roboto, sans-serif
+    text-align: center
+    color: $text_color
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5))
+
+.content_one_element_one_list
+    width: 100%
+    height: 40px
+    font-family: Roboto, sans-serif
+    text-align: center
+    color: $text_color
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5))
+
+.content_one_element_two
+    background-color: rgba(0, 0, 0, 0.4   )
+    border-radius: 20px  
+
+.content_one_element_three
+    background-color: rgba(0, 0, 0, 0.4   )
+    border-radius: 20px  
+
+.content_two
+    height: 400px
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-column-gap: 150px
+    margin: 30px
+    padding-left: 150px
+    padding-right: 150px
+
+.content_two_element_two_title
+    font-size: 45px
+    width: 100%
+    height: 50
+    font-family: Roboto, sans-serif
+    text-align: center
+    color: $text_color
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5))
+
+.content_two_element_two_one
+    background-color: rgba(0, 0, 0, 0.4   )
+    border-radius: 20px
+
+.content_two_element_two_two
+    background-color: rgba(0, 0, 0, 0.4   )
+    border-radius: 20px
+
+.content_three
+    height: 450px
+    display: grid
+    grid-template-rows: 1fr 3fr
+
+.content_three_element_one
+    margin: 0 20px 0 20px
+    border-radius: 20px
+    background-color: rgba(0, 0, 0, 0.4 )
+
+.content_three_element_two
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-column-gap: 20px
+    margin: 20px 20px 0 20px
+
+.content_three_element_two_container_one
+    border-radius: 20px
+    background-color: rgba(0, 0, 0, 0.4 )
+
+.content_three_element_two_container_two
+    border-radius: 20px
+    background-color: rgba(0, 0, 0, 0.4 )
+
+.content_three_element_two_container_three
+    border-radius: 20px
+    background-color: rgba(0, 0, 0, 0.4 )
+
+@media screen and ( max-width: 1250px)
+    .content_one
+        height: 1300px
+
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        grid-row-gap: 30px
+        margin: 30px
+        width: 460px
+        justify-self: center
+        align-self: center
+
+    .content_one_element_one
+        background-color: rgba(0, 0, 0, 0.4   )
+        border-radius: 20px  
+        grid-row-start: 1
+        grid-row-end: 3
+        grid-column-start: 1
+        grid-column-end: 4
+
+    .content_one_element_two
+        background-color: rgba(0, 0, 0, 0.4   )
+        border-radius: 20px    
+        grid-row-start: 3
+        grid-row-end: 5
+        grid-column-start: 1
+        grid-column-end: 4
+
+    .content_one_element_three
+        background-color: rgba(0, 0, 0, 0.4   )
+        border-radius: 20px    
+        grid-row-start: 5
+        grid-row-end: 7
+        grid-column-start: 1
+        grid-column-end: 4
+
+    .content_two
+        height: 850px
+        width: 460px
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-column-gap: 30px
+        margin: 30px
+        padding: 0
+        justify-self: center
+        align-self: center
+    
+    .content_two_element_two_one
+        background-color: rgba(0, 0, 0, 0.4   )
+        border-radius: 20px
+        grid-row-start: 1
+        grid-row-end: 3
+        grid-column-start: 1
+        grid-column-end: 4
+        height: 350px
+        width: 100%
+
+    .content_two_element_two_two
+        background-color: rgba(0, 0, 0, 0.4   )
+        border-radius: 20px
+        grid-row-start: 3
+        grid-row-end: 5
+        grid-column-start: 1
+        grid-column-end: 4
+        height: 350px
+        width: 100%
+
+    .content_three
+
+        display: grid
+        grid-template-rows: 150px 3fr
+        height: 1100px
+
+    .content_three_element_two
+
+        display: grid
+        display: grid
+        grid-template-rows: 1fr 1fr 1fr
+        grid-row-gap: 30px
+        height: 900px
+        width: 460px
+        align-self: center
+        justify-self: center
+
+    .content_three_element_two_container_one
+
+        border-radius: 20px
+        background-color: rgba(0, 0, 0, 0.4 )
+        grid-row-start: 1
+        grid-row-end: 2
+        grid-column-start: 1
+        grid-column-end: 4
+
+    .content_three_element_two_container_two
+
+        border-radius: 20px
+        background-color: rgba(0, 0, 0, 0.4 )
+        grid-row-start: 2
+        grid-row-end: 4
+        grid-column-start: 1
+        grid-column-end: 4
+
+    .content_three_element_two_container_three
+
+        border-radius: 20px
+        background-color: rgba(0, 0, 0, 0.4 )
+        grid-row-start: 4
+        grid-row-end: 6
+        grid-column-start: 1
+        grid-column-end: 4
+
+    .footer
+        position: absolute 
+        left: 0
+        width: 100%
+        background: rgba(0, 0, 0, 0.6)
+        display: grid
+        grid-template-columns: 1fr 4fr
+        display: flex
+        top: 3700px
+
+    main
+        height: 2000px
+        margin-top: 200px 
+        display: grid
+
+@media screen and ( max-width: 530px)
+    
+    .content_one
+        height: 1000px
+
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        grid-row-gap: 30px
+        margin: 30px
+        width: auto
+        justify-self: center
+        align-self: center
+        width: auto
+        left: 0
+        grid-column-start: 1
+        grid-column-end: 2
+
+    .content_one_element_one
+
+        background-color: rgba(0, 0, 0, 0.4   )
+        border-radius: 20px  
+        padding: 20px
+        
+    .content_one_element_two
+
+        background-color: rgba(0, 0, 0, 0.4   )
+        border-radius: 20px    
+        grid-row-start: 3
+        grid-row-end: 5
+        grid-column-start: 1
+        grid-column-end: 4
+
+    .content_one_element_three
+
+        background-color: rgba(0, 0, 0, 0.4   )
+        border-radius: 20px    
+        grid-row-start: 5
+        grid-row-end: 7
+        grid-column-start: 1
+        grid-column-end: 4
+
+    .content_two
+        height: 580px
+        width: auto
+
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-column-gap: 30px
+        margin: 30px
+        padding: 0
+    
+    .content_two_element_two_one
+
+        background-color: rgba(0, 0, 0, 0.4   )
+        border-radius: 20px
+        grid-row-start: 1
+        grid-row-end: 3
+        grid-column-start: 1
+        grid-column-end: 4
+        height: 250px
+        width: auto
+
+    .content_two_element_two_two
+
+        background-color: rgba(0, 0, 0, 0.4   )
+        border-radius: 20px
+        grid-row-start: 3
+        grid-row-end: 5
+        grid-column-start: 1
+        grid-column-end: 4
+        height: 250px
+        width: auto
+
+    .content_three
+
+        display: grid
+        grid-template-rows: 150px 3fr
+        height: 1100px
+        width: auto
+
+    .content_three_element_two
+
+        display: grid
+        display: grid
+        grid-template-rows: 1fr 1fr 1fr
+        grid-row-gap: 30px
+        height: 900px
+        width: auto
+        align-self: center
+        justify-self: center
+
+    .content_three_element_two_container_one
+
+        border-radius: 20px
+        background-color: rgba(0, 0, 0, 0.4 )
+        grid-row-start: 1
+        grid-row-end: 2
+        grid-column-start: 1
+        grid-column-end: 4
+        padding: 20px
+
+    .content_three_element_two_container_two
+
+        border-radius: 20px
+        background-color: rgba(0, 0, 0, 0.4 )
+        grid-row-start: 2
+        grid-row-end: 4
+        grid-column-start: 1
+        grid-column-end: 4
+        padding: 20px 60px 20px 60px
+
+    .content_three_element_two_container_three
+
+        border-radius: 20px
+        background-color: rgba(0, 0, 0, 0.4 )
+        grid-row-start: 4
+        grid-row-end: 6
+        grid-column-start: 1
+        grid-column-end: 4
+        padding: 40px
+
+    .footer
+        position: absolute 
+        left: 0
+        width: 100%
+        background: rgba(0, 0, 0, 0.6)
+        display: grid
+        grid-template-columns: 1fr 4fr
+        display: flex
+        top: 3000px
+
+    main
+        height: 2000px
+        margin-top: 110px 
+        display: grid
+
+    .content_one_element_one_list
+        width: 100%
+        height: 40px
+        font-size: 11px
+        font-family: Roboto, sans-serif
+        text-align: center
+        color: $text_color
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5))
+
+    .content_one_element_one_title
+        font-size: 30px
+        width: 100%
+        height: 50
+        font-family: Roboto, sans-serif
+        text-align: center
+        color: $text_color
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5))
+
+    .content_two_element_two_title
+        font-size: 30px
+        width: 100%
+        height: 50
+        font-family: Roboto, sans-serif
+        text-align: center
+        color: $text_color
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5))
+
+    .content_three_element_one
+        margin: 0 20px 0 20px
+        border-radius: 20px
+        background-color: rgba(0, 0, 0, 0.4 )
+        height: 100px

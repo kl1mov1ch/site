@@ -1,0 +1,577 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+$text_color: #ffffff
+
+//--------------contaier----------------//
+
+.container
+    display: grid
+
+//----------header----------//
+body
+    display: grid
+    margin: 0
+    width: 100%
+    height: 100vh  
+    background: #006f32
+    //background: linear-gradient(171.41deg, #09815d 20%, #045E43 60.81%, #005c42 100%) no-repeat
+
+.header     
+    z-index: 1
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    background: rgba(0, 0, 0, 0.6)
+    display: grid
+    grid-template-columns: 1fr 4fr
+    display: flex
+    justify-content: space-between
+
+.logo_menu  
+    margin-top: 40px
+    margin-left: 50px
+
+li 
+    list-style: none
+    display: inline-block
+    padding: 45px
+
+.menu_item
+    text-decoration: none
+    color: $text_color
+    font-size: 25px
+    font-family: Roboto , sans-serif
+
+.menu_item:hover
+    font-family: Roboto, sans-serif
+    text-decoration: none
+    color: $text_color
+    padding-bottom: 5px
+    border-bottom: 2px solid $text_color 
+    transition-duration: 0.5s
+
+.ul_menu 
+    margin: 0
+    padding: 0
+
+.menu
+    display: inline-block
+    display: grid
+
+#menu_toggle
+    display: none
+
+//--------------------------------------------------------//
+
+@media screen and ( max-width: 1410px  )
+    .header
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        background: rgba(0, 0, 0, 0.6)
+        display: grid
+        grid-template-columns: 1fr
+
+    .ul_menu 
+        margin: 0
+        padding: 0
+        display: flex
+        justify-content: center
+    
+    .logo_menu  
+        display: flex
+        justify-content: center
+        margin: 20px 0 0 0 
+
+    .header
+        position: fixed
+
+@media screen and ( max-width: 1000px  )
+    #menu_toggle
+        opacity: 0
+  
+    #menu_toggle:checked ~ .menu_btn > span 
+        transform: rotate(45deg)
+  
+    #menu_toggle:checked ~ .menu_btn > span::before 
+        top: 0
+        transform: rotate(0)
+  
+    #menu_toggle:checked ~ .menu_btn > span::after 
+        top: 0
+        transform: rotate(90deg)
+  
+    #menu_toggle:checked ~ .ul_menu 
+        visibility: visible
+        left: 0
+  
+    .menu_btn 
+        display: flex
+        align-items: center
+        position: fixed
+        top: 20px
+        left: 20px
+        width: 26px
+        height: 26px
+        cursor: pointer
+        z-index: 1
+  
+    .menu_btn > span,
+    .menu_btn > span::before,
+    .menu_btn > span::after 
+        display: block
+        position: absolute
+        width: 100%
+        height: 2px
+        background-color: $text_color
+        transition-duration: 0.4s
+
+    .menu_btn > span::before 
+        content: ''
+        top: -8px
+    
+    .menu_btn > span::after 
+        content: ''
+        top: 8px
+  
+  
+    .ul_menu 
+        display: block
+        position: fixed
+        visibility: hidden
+        top: 0
+        width: 250px
+        height: 100%
+        margin: 0
+        padding: 80px 0
+        list-style: none
+        background-color: rgba(0, 0, 0, 0.3)
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2)
+        transition-duration: 0.25s
+    
+    .menu_item 
+        padding: 12px
+        font-family: Roboto, sans-serif
+        font-size: 25px
+        text-decoration: none
+        transition-duration: 0.25s
+
+    .logo_menu 
+        display: flex
+        justify-content: right
+        margin: 20px
+    
+    .header
+        position: fixed
+
+    li 
+        list-style: none
+        display: inline-block
+        padding: 40px 45px 0 
+
+@media screen and ( max-width: 1410px  )
+    .header
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        background: rgba(0, 0, 0, 0.6)
+        display: grid
+        grid-template-columns: 1fr
+
+    .ul_menu 
+        margin: 0
+        padding: 0
+        display: flex
+        justify-content: center
+    
+    .logo_menu  
+        display: flex
+        justify-content: center
+        margin: 20px 0 0 0 
+
+    .header
+        position: fixed
+
+@media screen and ( max-width: 1000px  )
+    #menu_toggle
+        opacity: 0
+  
+    #menu_toggle:checked ~ .menu_btn > span 
+        transform: rotate(45deg)
+  
+    #menu_toggle:checked ~ .menu_btn > span::before 
+        top: 0
+        transform: rotate(0)
+  
+    #menu_toggle:checked ~ .menu_btn > span::after 
+        top: 0
+        transform: rotate(90deg)
+  
+    #menu_toggle:checked ~ .ul_menu 
+        visibility: visible
+        left: 0
+  
+    .menu_btn 
+        display: flex
+        align-items: center
+        position: fixed
+        top: 20px
+        left: 20px
+        width: 26px
+        height: 26px
+        cursor: pointer
+        z-index: 1
+  
+    .menu_btn > span,
+    .menu_btn > span::before,
+    .menu_btn > span::after 
+        display: block
+        position: absolute
+        width: 100%
+        height: 2px
+        background-color: $text_color
+        transition-duration: 0.4s
+        
+    .menu_btn > span::before 
+        content: ''
+        top: -8px
+    
+    .menu_btn > span::after 
+        content: ''
+        top: 8px
+  
+    .ul_menu 
+        display: block
+        position: fixed
+        visibility: hidden
+        top: 0
+        width: 200px
+        height: 100%
+        margin: 0
+        padding-top: 30px
+        list-style: none
+        background-color: rgba(0, 0, 0, 0.7)
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.8)
+        transition-duration: 0.25s
+    
+    .menu_item 
+        padding: 0px
+        font-family: Roboto, sans-serif
+        font-size: 20px
+        text-decoration: none
+        transition-duration: 0.25s
+
+    .logo_menu 
+        display: flex
+        justify-content: right
+        margin: 20px
+    
+    .header
+        position: fixed
+
+//-----------footer-----------------//
+
+.footer
+    position: absolute
+    top: 1700px
+    left: 0
+    width: 100%
+    background: rgba(0, 0, 0, 0.6)
+    display: grid
+    grid-template-columns: 1fr
+    display: flex
+    justify-content: space-between
+    margin-left: 0 
+
+.logo_menu_footer
+    margin-top: 43px
+    margin-right: 50px
+    display: grid
+
+.li_feetback
+    padding: 20px
+    margin-left: 10px
+    margin-right: 10px
+
+//----------------------------------------//
+
+@media screen and ( max-width: 1020px  )
+    
+    .logo_menu_footer
+        margin-top: 43px
+        margin-right: 50px
+        display: none
+
+    .li_feetback
+        padding: 10px
+
+    .footer
+        position: absolute
+        top: 1900px
+        left: 0
+        width: 100%
+        background: rgba(0, 0, 0, 0.6)
+        display: grid
+        grid-template-columns: 1fr
+        display: flex
+        justify-content: center
+        margin-left: 0 
+
+    .ul_feetback
+        padding: 0
+
+    .facebook_icon
+        margin-left: 0px
+
+@media screen and ( max-width: 470px  )
+
+    .logo_menu_footer
+        margin-top: 43px
+        margin-right: 50px
+        display: none
+
+    .li_feetback
+        padding: 10px 3px 10px 3px
+
+    .footer
+        position: absolute
+        top: 1900px
+        left: 0
+        width: 100%
+        background: rgba(0, 0, 0, 0.6)
+        display: grid
+        grid-template-columns: 1fr
+        display: flex
+        justify-content: center
+        margin-left: 0 
+
+    .ul_feetback
+        padding: 0
+
+    .facebook_icon
+        margin-left: 0px
+
+@media screen and ( max-width: 400px )
+   
+    svg.logo-svg 
+        width: 100%
+        height: 100%
+        padding-left: 40px
+
+    .logo_menu_footer
+        margin-top: 43px
+        margin-right: 50px
+        display: none
+
+    .li_feetback
+        padding: 10px 0 10px 0
+
+    .footer
+        position: absolute
+        top: 1900px
+        left: 0
+        width: 100%
+        background: rgba(0, 0, 0, 0.6)
+        display: grid
+        grid-template-columns: 1fr
+        display: flex
+        justify-content: center
+        margin-left: 0 
+
+    .ul_feetback
+        padding: 0
+
+    .facebook_icon
+        margin-left: 0px
+
+//-------------main----------------//
+
+.main
+    margin-top: 200px   
+    height: auto
+
+//===================================//
+
+.main_cotainer
+    height: auto
+
+//=========================================//
+
+.main_cotainer_one
+    display: grid
+    grid-template-rows: auto auto
+
+//=========================================//
+
+.main_cotainer_one_contact_inf
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-column-gap: 20px
+    padding: 20px
+
+.main_cotainer_one_contact_number
+    display: grid
+    justify-content: center
+    align-items: center
+    background-color: rgba(0, 0, 0, 0.4 )
+    border-radius: 15px
+
+.number 
+    text-align: center
+    font-size: 20px
+    font-family: Roboto, sans-serif
+    color: $text_color
+    text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4)
+
+.locate
+    text-align: center
+    font-size: 20px
+    font-family: Roboto, sans-serif
+    color: $text_color
+    text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4)
+
+.main_cotainer_one_contact_day_list
+    display: grid
+    justify-content: center
+    align-items: center
+    background-color: rgba(0, 0, 0, 0.4 )
+    border-radius: 15px
+
+.main_cotainer_one_contact_p_number
+    text-align: center
+    font-size: 30px
+    font-family: Roboto, sans-serif
+    color: $text_color
+    text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4)
+
+.main_cotainer_one_p_text
+    text-align: center
+    font-size: 50px
+    font-family: Roboto, sans-serif
+    color: $text_color
+    text-shadow: 0px 6px 6px rgba(0, 0, 0, 0.7)
+
+.main_cotainer_one_text
+    display: grid
+    justify-content: center
+    align-items: center
+
+.list
+    text-align: center
+    font-size: 20px
+    font-family: Roboto, sans-serif
+    color: $text_color
+    text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4)
+
+//=====================================================//
+
+.main_cotainer_two
+    display: grid
+    grid-template-rows: auto auto
+
+//==================================================//
+
+.container_two_title
+    display: grid
+    justify-content: center
+    align-items: center
+
+.container_two_p_title
+    text-align: center
+    font-size: 50px
+    font-family: Roboto, sans-serif
+    color: $text_color
+    text-shadow: 0px 6px 6px rgba(0, 0, 0, 0.7)
+
+//==================================================//
+
+.container_two_map_one
+    display: grid
+    justify-content: center
+    align-items: center
+
+.container_two_map_two
+    display: none
+
+.container_two_map_three
+    display: none
+
+.map_1920px
+    max-width: 1000px
+    width: 600px
+
+@media screen and ( max-width:1020px )
+    .container_two_map_one
+        display: none
+
+    .container_two_map_two
+        display: grid
+        justify-content: center
+        align-items: center
+
+
+@media screen and ( max-width:620px )
+    .container_two_map_one
+        display: none
+
+    .container_two_map_two
+        display: none
+
+
+    .container_two_map_three
+        display: grid
+        justify-content: center
+        align-items: center
+
+    
+//================================================//
+
+@media screen and ( max-width:1020px )
+    .main_cotainer_one_contact_inf
+        display: grid
+        grid-template-rows: 1fr 1fr
+        grid-row-gap: 20px
+        padding: 20px
+
+    .main_cotainer_one_contact_number
+
+        display: grid
+        justify-content: center
+        align-items: center
+        background-color: rgba(0, 0, 0, 0.4 )
+        border-radius: 15px
+        grid-row: 1
+        grid-column-start: 1
+        grid-column-end: 4
+
+    .number 
+        text-align: center
+        font-size: 20px
+        font-family: Roboto, sans-serif
+        color: $text_color
+        text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4)
+
+    .locate
+        text-align: center
+        font-size: 20px
+        font-family: Roboto, sans-serif
+        color: $text_color
+        text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4)
+
+    .main_cotainer_one_contact_day_list
+
+        display: grid
+        justify-content: center
+        align-items: center
+        background-color: rgba(0, 0, 0, 0.4 )
+        border-radius: 15px
+        grid-row: 2
+        grid-column-start: 1
+        grid-column-end: 4
+
+
+
+    
